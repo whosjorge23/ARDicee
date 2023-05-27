@@ -19,6 +19,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.tintColor = .orange
+//        navigationController?.navigationBar.barTintColor = UIColor(named: "009432")
+        
 //        DOTS FOR DEBUG
 //        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
@@ -26,7 +29,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
         
         sceneView.autoenablesDefaultLighting = true
     }
@@ -163,7 +166,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         let gridMaterial = SCNMaterial()
 
-        gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/grid.png")
+        gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/wood.jpg")
 
         plane.materials = [gridMaterial]
 
